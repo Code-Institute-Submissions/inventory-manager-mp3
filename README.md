@@ -1,41 +1,69 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Inventory Manager MP3
+## Introduction: 
 
-Welcome USER_NAME,
+## UX: 
+### User Goals
+*	Build an app that allows the user to search for items held within a stock room.
+*   User should be able to update the quantity remaining.
+*   User can request for new items to be added through a request form.
+*   Administrator can create, update, delete and search for items.
+*   Administrator level is password protected.
+*   Interface is easy to use.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+## User ideas: 
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Requirements:
+The requirements for the app are as follows.
+*	Update, create, delete and search for items.
+*   Request form for new items.
+*   Navigation between pages.
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+## Design:
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Images:
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+### Fonts: 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
 
-## Updates Since The Instructional Video
+### Colours: 
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed along with other common files.
+### Background: 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Wireframe:
+[wireframes]().
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Testing:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Bugs:
+1. **Problem-**
+ 
+**Fix-**
 
---------
 
-Happy coding!
+## Technologies used:
+* HTML
+* CSS
+* Javascript
+* Bootstrap
+* Flask
+* Python
+* MongoDB
+
+## Deployment:
+
+
+
+## Credits:
+* Index page https://startbootstrap.com/themes/agency/
+
+
+## Acknowledge:
+
+
+## Final Notes:
