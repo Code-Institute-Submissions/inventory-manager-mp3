@@ -33,7 +33,15 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('solvents') }}">Solvents</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('consumables') }}">Consumables</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('request') }}">Request</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('admin') }}">Adminstration</a></li>
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Adminstration
+                                </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ url_for('adminsolvents') }}">Admin Solvent</a>
+                                <a class="dropdown-item" href="{{ url_for('adminconsumables') }}">Admin Consumables</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -73,11 +81,12 @@
             </div>
         </footer>
 
-    $(document).ready(function() {
+
+<script type="text/javascript">
+        $(document).ready(function() {
         $('select').material_select();
         });
-
- 
+</script>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -92,4 +101,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     </body>
+
 </html>
