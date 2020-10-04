@@ -12,7 +12,7 @@ def index():
 @app.route('/solvents')
 def solvents():
     return render_template("solvents.html")
-    
+
 
 @app.route('/consumables')
 def consumables():
@@ -22,6 +22,11 @@ def consumables():
 @app.route('/request')
 def request():
     return render_template("request.html")
+
+
+@app.route('/admin')
+def admin():
+    return render_template("admin.html")
 
 
 if __name__ == '__main__':
