@@ -2,5 +2,18 @@
 
 <h1>Solvents page</h1>
 
+{% for solvent in solvents %}
+    {{solvent.Name}}
+    {{solvent.Supplier}}
+    {{solvent.Cat_no}}
+    {{solvent.Grade}}
+    {{solvent.Min_Quantity}}
+    {{solvent.Quantity_Available}}
+    {{solvent.Quantity_Unit}}
+    {{solvent.Price}}
+    {{solvent.Currency}}
+    {{solvent.Comment}}
+{% endfor %}
 
 {% endblock %}
+

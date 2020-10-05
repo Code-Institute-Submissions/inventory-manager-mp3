@@ -2,4 +2,15 @@
 
 <h1>Consumables page</h1>
 
+{% for consumable in consumables %}
+    {{consumable.Name}}
+    {{consumable.Supplier}}
+    {{consumable.Cat_no}}
+    {{consumable.Min_Quantity}}
+    {{consumable.Quantity_Available}}
+    {{consumable.Quantity_Unit}}
+    {{consumable.Price}}
+    {{consumable.Currency}}
+{% endfor %}
+
 {% endblock %}
