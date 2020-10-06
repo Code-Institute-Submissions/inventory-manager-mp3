@@ -3,17 +3,35 @@
 <h1>Solvents page</h1>
 
 {% for solvent in solvents %}
-    {{solvent.Name}}
-    {{solvent.Supplier}}
-    {{solvent.Cat_no}}
-    {{solvent.Grade}}
-    {{solvent.Min_Quantity}}
-    {{solvent.Quantity_Available}}
-    {{solvent.Quantity_Unit}}
-    {{solvent.Price}}
-    {{solvent.Currency}}
-    {{solvent.Comment}}
-{% endfor %}
+<table class="responsive-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Supplier</th>
+      <th>Cat no</th>
+      <th>Grade</th>
+      <th>Min Quantity</th>
+      <th>Quantity Available</th>
+      <th>Quantity Unit</th>
+      <th>Price</th>
+      <th>Currency</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
 
-{% endblock %}
-
+  <tbody>
+    <tr>
+      <td><h5>{{solvent.Name}}</h5></td>
+      <td>{{solvent.Supplier}}</td>
+      <td>{{solvent.Cat_no}}</td>
+      <td>{{solvent.Grade}}</td>
+      <td>{{solvent.Min_Quantity}}</td>
+      <td>{{solvent.Quantity_Available}}</td>
+      <td>{{solvent.Quantity_Unit}}</td>
+      <td>{{solvent.Price}}</td>
+      <td>{{solvent.Currency}}</td>
+      <td>{{solvent.Comment}}</td>
+    </tr>
+  </tbody>
+</table>
+{% endfor %} {% endblock %}

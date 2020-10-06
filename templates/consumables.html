@@ -3,14 +3,32 @@
 <h1>Consumables page</h1>
 
 {% for consumable in consumables %}
-    {{consumable.Name}}
-    {{consumable.Supplier}}
-    {{consumable.Cat_no}}
-    {{consumable.Min_Quantity}}
-    {{consumable.Quantity_Available}}
-    {{consumable.Quantity_Unit}}
-    {{consumable.Price}}
-    {{consumable.Currency}}
-{% endfor %}
 
-{% endblock %}
+<table class="responsive-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Supplier</th>
+      <th>Cat no</th>
+      <th>Min Quantity</th>
+      <th>Quantity Available</th>
+      <th>Quantity Unit</th>
+      <th>Price</th>
+      <th>Currency</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><h5>{{consumable.Name}}</h5></td>
+      <td>{{consumable.Supplier}}</td>
+      <td>{{consumable.Cat_no}}</td>
+      <td>{{consumable.Min_Quantity}}</td>
+      <td>{{consumable.Quantity_Available}}</td>
+      <td>{{consumable.Quantity_Unit}}</td>
+      <td>{{consumable.Price}}</td>
+      <td>{{consumable.Currency}}</td>
+    </tr>
+  </tbody>
+</table>
+{% endfor %} {% endblock %}
