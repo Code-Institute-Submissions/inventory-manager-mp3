@@ -3,7 +3,7 @@
 <h1>AdminSolvents</h1>
 
 <div class="row">
-    <form action="" method="POST" class="col s12">
+    <form action="{{ url_for('adminsolvents_add') }}" method="POST" class="col s12">
       <div class="row">
         <div class="input-field col s6">
           <input id="Name" type="text" name="Name" class="validate">
@@ -54,7 +54,13 @@
           <label for="Comment">Comment:</label>
         </div>
       </div>
+<div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit Solvent
+        <i class="material-icons right"></i>
+    </button>
+</div>
     </form>
   </div>
+  
 
 {% endblock %}

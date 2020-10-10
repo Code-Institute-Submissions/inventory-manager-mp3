@@ -1,14 +1,14 @@
 import os
 import pymongo
 
-if os.path.exists("env.py"):
-        import env
 
-
-from flask import Flask, render_template, jsonify, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
+
+if os.path.exists("env.py"):
+    import env
 
 MONGO_URI = os.environ.get("MONGO_URI")
 DATABASE = "myfirstcluster"
@@ -22,6 +22,7 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
 
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -30,17 +31,19 @@ def index():
 
 @app.route('/solvents')
 def solvents():
-    return render_template("solvents.html", solvents=mongo.db.solvents.find())
+    solvents = mongo.db.solvents.find()
+    return render_template("solvents.html", solvents=solvents)
 
 
 @app.route('/consumables')
 def consumables():
-    return render_template("consumables.html", consumables=mongo.db.consumables.find())
+    consumables = mongo.db.consumables.find()
+    return render_template("consumables.html", consumables=consumables)
 
 
-@app.route('/request')
-def request():
-    return render_template("request.html")
+@app.route('/request_table')
+def request_table():
+    return render_template("request_table.html")
 
 
 @app.route('/adminsolvents')
@@ -51,6 +54,20 @@ def adminsolvents():
 @app.route('/adminconsumables')
 def adminconsumables():
     return render_template("adminconsumables.html")
+
+
+@app.route('/adminsolvents_add', methods=['POST'])
+def adminsolvents_add():
+    solvents = mongo.db.solvents
+    solvents.insert_one(request.form.to_dict())
+    return redirect(url_for('solvents'))
+
+
+@app.route('/adminconsumables_add', methods=['POST'])
+def adminconsumables_add():
+    consumables = mongo.db.consumables
+    consumables.insert_one(request.form.to_dict())
+    return redirect(url_for('consumables'))
 
 
 if __name__ == '__main__':

@@ -3,7 +3,7 @@
 <h1>AdminConsumables</h1>
 
 <div class="row">
-  <form action="" method="POST" class="col s12">
+  <form action="{{ url_for('adminconsumables_add') }}" method="POST" class="col s12">
 
     <div class="row">
         <div class="input-field col s6">
@@ -49,6 +49,12 @@
             <label for="Currency">Currency:</label>
         </div>
     </div>
+
+<div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit Consumable
+        <i class="material-icons right"></i>
+    </button>
+</div>
   </form>
 </div>
 
