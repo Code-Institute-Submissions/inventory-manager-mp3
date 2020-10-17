@@ -1,0 +1,69 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<h1>Solvent Update</h1>
+
+<div class="row">
+    <form action="{{url_for('solchange', solvent_id=solvent._id)}}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="Name" type="text" name="Name" class="validate" value="{{solvent.Name}}">
+                <label for="Name"></label>
+            </div>
+        <div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="Quantity_Available" type="text" name="Quantity_Available" class="validate" value="">
+                <label for="Quantity_Available">Quantity Available:</label>
+            </div>
+        <div>
+              <div class="row">
+        <div class="input-field col s6">
+          <input id="Cat_no" type="text" name="Cat_no" class="validate" value="{{solvent.Cat_no}}">
+          <label class="active" for="cat_no">Cat number:</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="Grade" type="text" name="Grade" class="validate" value="{{solvent.Grade}}">
+          <label class="active" for="Grade">Grade:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="Min_Quantity" type="text" name="Min_Quantity" class="validate" value="{{solvent.Min_Quantity}}">
+          <label class="active" for="Min_Quantity">Min Quantity:</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="Supplier" type="text" name="Supplier" class="validate" value="{{solvent.Supplier}}">
+          <label class="active" for="Supplier">Quantity Available:</label>
+        </div>
+      </div>
+            <div class="row">
+        <div class="input-field col s6">
+          <input id="Quantity_Unit" type="text" name="Quantity_Unit" class="validate" value="{{solvent.Quantity_Unit}}">
+          <label class="active" for="Quantity_Unit">Quantity Unit:</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="Price" type="text" name="Price" class="validate" value="{{solvent.Price}}">
+          <label class="active" for="Price">Price:</label>
+        </div>
+      </div>
+            <div class="row">
+        <div class="input-field col s6">
+          <input id="Currency" type="text" name="Currency" class="validate" value="{{solvent.Currency}}">
+          <label class="active" for="Currency">Currency:</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="Comment" type="text" name="Comment" class="validate" value="{{solvent.Comment}}">
+          <label class="active" for="Comment">Comment:</label>
+        </div>
+      </div>
+        <div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Update Item
+            <i class="material-icons right"></i>
+            </button>
+        </div>
+    </form>
+</div>
+  
+
+{% endblock %}
