@@ -1,13 +1,179 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@500&family=Montserrat:wght@500&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-family: 'David Libre', serif;
-  font-size: 62.5%;
+    font-family: 'David Libre', serif;
+    font-size: 62.5%;
 }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-bottom: 0;
+}
+/*-------------------nav bar-----------------*/
+
+.menu {
+    margin: 20px 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.menu-row {
+    align-items: right;
+}
+
+span fas {
+    font-size: 30px;
+}
+
+
+
+
+
+/*-------------------banner-----------------*/
+
+.banner {
+    background: url('/static/assets/img/colour_beaker.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 0;
+    min-height: 500px;
+}
+
+.banner > h1 {
+    padding-top: 35px;
+    text-align: center;
+    font-size: 120px;
+    margin: 0;
+}
+
+.banner > h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+.options {
+    font-size: 1.2rem;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/*-------------------footer-----------------*/
+
+footer {
+    padding: 0;
+}
+
+/*#social {
+    padding: 0;
+    margin-bottom: 0;
+    min-height: 70px;
+    text-align: left;
+    margin-top: 35px;
+}
+
+#social > li {
+    display: inline;
+    padding-left: 20px;
+}*/
+
+
+
+footer {
+    font-size: 220%;
+}
+
+footer {
+    line-height: 100%;
+}
+
+/*.contact i {
+    font-size: 92%;
+}
+
+.contact {
+    text-align: right;
+    padding-right: 70px;
+    margin-top: 40px;
+}*/
+
+
+/*-------------------colours-----------------*/
+
+.menu-row, footer {
+    background-color: rgb(5, 28, 102);
+    color:#ff6c00;
+}
+
+.menu,  footer i, .contact, .fas {
+    color: #ff6c00
+}
+
+.footer-info {
+    color: #ff6c00;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+@media screen and (max-width: 579px) {
+/*body {
+    font-family:  'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.banner > h1 {
+    padding-top: 35px;
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+}
+
+.banner {
+    background: url("assets/img/colour_beaker.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    min-height: 250px;
+}
+
+.about-area p {
+    padding: 35px auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+}*/
+
 
