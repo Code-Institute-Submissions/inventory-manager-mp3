@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<h1>AdminSolvents</h1>
+
+<div class="row">
+    <form action="" class="col s12">
+    <div class="row">
+        <div class="input-field col s12">
+            <select id="solvent" name="Name">
+                <option value="" disabled selected>Solvent</option>
+                    {% for solvent in solvents %}
+                <option value="{{solvent.Name}}">{{solvent.Name}}</option>
+                    {% endfor %}
+            </select>
+            <label>Solvents to delete</label>
+        </div>
+    </div>
+    </form>
+  </div>
+
+{% endblock %}
