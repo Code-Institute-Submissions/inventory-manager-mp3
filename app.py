@@ -93,6 +93,28 @@ def addconsumables_add():
     return redirect(url_for('consumables'))
 
 
+@app.route('/conquantchange/<consumable_id>')
+def conquantchange(consumable_id):
+    con = mongo.db.consumables.find_one({"_id": ObjectId(consumable_id)})
+    return render_template('conquantchange.html', consumable=con)
+
+
+@app.route('/conchange/<consumable_id>', methods=["POST"])
+def conchange(consumable_id):
+    mongo.db.consumables.update({'_id': ObjectId(consumable_id)},
+    {
+        'Name': request.form.get('Name'),
+        'Supplier': request.form.get('Supplier'),
+        'Cat_no': request.form.get('Cat_no'),
+        'Min_Quantity': request.form.get('Min_Quantity'),
+        'Quantity_Available': request.form.get('Quantity_Available'),
+        'Quantity_Unit': request.form.get('Quantity_Unit'),
+        'Price': request.form.get('Price'),
+        'Currency': request.form.get('Currency'),
+    })
+    return redirect(url_for('consumables'))
+
+
 @app.route('/deletesolvent')
 def deletesolvent():
     return render_template('deletesolvent.html')
