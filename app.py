@@ -50,10 +50,17 @@ def addsolvents():
     return render_template("addsolvents.html")
 
 
+@app.route('/addsolvents', methods=['POST'])
+def addsolvents_add():
+    solvents = mongo.db.solvents
+    solvents.insert_one(request.form.to_dict())
+    return redirect(url_for('solvents'))
+
+
 @app.route('/solquantchange/<solvent_id>')
 def solquantchange(solvent_id):
-    the_solvent = mongo.db.solvents.find_one({"_id": ObjectId(solvent_id)})
-    return render_template('solquantchange.html', solvent=the_solvent)
+    sol = mongo.db.solvents.find_one({"_id": ObjectId(solvent_id)})
+    return render_template('solquantchange.html', solvent=sol)
 
 
 @app.route('/solchange/<solvent_id>', methods=["POST"])
@@ -74,10 +81,16 @@ def solchange(solvent_id):
     return redirect(url_for('solvents'))
 
 
-@app.route('/addsolvents', methods=['POST'])
-def addsolvents_add():
-    solvents = mongo.db.solvents
-    solvents.insert_one(request.form.to_dict())
+
+@app.route('/deletesolvent/<solvent_id>')
+def deletesolvent(solvent_id):
+    sol = mongo.db.solvents.find_one({"_id": ObjectId(solvent_id)})
+    return render_template('deletesolvent.html', solvent=sol)
+
+
+@app.route('/deletesolvent_delete/<solvent_id>')
+def deletesolvent_delete(solvent_id):
+    mongo.db.solvents.remove({'_id': ObjectId(solvent_id)})
     return redirect(url_for('solvents'))
 
 
@@ -115,26 +128,16 @@ def conchange(consumable_id):
     return redirect(url_for('consumables'))
 
 
-@app.route('/deletesolvent')
-def deletesolvent():
-    return render_template('deletesolvent.html')
+@app.route('/deleteconsumable/<consumable_id>')
+def deleteconsumable(consumable_id):
+    con = mongo.db.consumables.find_one({"_id": ObjectId(consumable_id)})
+    return render_template('deleteconsumable.html', consumable=con)
 
 
-@app.route('/deletesolvent/<sol_id>')
-def deletesolvent_delete(sol_id):
-    mongo.db.solvents.remove({'_id': ObjectId(sol_id)})
-    return redirect(url_for('solvents'))
-
-
-@app.route('/deleteconsumable')
-def deleteconsumable():
-    return render_template('deleteconsumable.html')
-
-
-@app.route('/deleteconsumable/<cid>')
-def deleteconsumable_delete(cid):
-    mongo.db.consumables.remove({'_id': ObjectId(cid)})
-    return render_template('consumables.html')
+@app.route('/deleteconsumable_delete/<consumable_id>')
+def deleteconsumable_delete(consumable_id):
+    mongo.db.consumables.remove({'_id': ObjectId(consumable_id)})
+    return redirect(url_for('consumables'))
 
 
 if __name__ == '__main__':
