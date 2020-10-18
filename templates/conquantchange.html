@@ -5,56 +5,47 @@
 <div class="row">
   <form action="{{url_for('conchange', consumable_id=consumable._id)}}" method="POST" class="col s12">
 
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Name" type="text" name="Name" class="validate"  value="{{consumable.Name}}"/>
-            <label for="Name">Name:</label>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="Name" placeholder="Name" value="{{consumable.Name}}">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Supplier" placeholder="Supplier" value="{{consumable.Supplier}}">
+            </div>
         </div>
-        <div class="input-field col s6">
-            <input id="Supplier" type="text" name="Supplier" class="validate"  value="{{consumable.Supplier}}"/>
-            <label for="Supplier">Supplier:</label>
-        </div>
-    </div>
 
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="Cat_no" placeholder="Cat no" value="{{consumable.Cat_no}}">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Min_Quantity" placeholder="Min Quantity" value="{{consumable.Min_Quantity}}">
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Cat_no" type="text" name="Cat_no" class="validate" value="{{consumable.Cat_no}}"/>
-            <label for="cat_no">Cat number:</label>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="Quantity_Available" placeholder="Quantity Available" value="{{consumable.Quantity_Available}}">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Quantity_Unit" placeholder="Quantity Unit" value="{{consumable.Quantity_Unit}}">
+            </div>
         </div>
-        <div class="input-field col s6">
-            <input id="Min_Quantity" type="text" name="Min_Quantity" class="validate" value="{{consumable.Min_Quantity}}"/>
-            <label for="Min_Quantity">Min Quantity:</label>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Quantity_Available" type="text" name="Quantity_Available" class="validate" value="{{consumable.Quantity_Available}}"/>
-            <label for="Quantity_Available">Quantity Available:</label>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="Price" placeholder="Price" value="{{consumable.Price}}">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Currency" placeholder="Currency" value="{{consumable.Currency}}">
+            </div>
         </div>
-        <div class="input-field col s6">
-            <input id="Quantity_Unit" type="text" name="Quantity_Unit" class="validate" value="{{consumable.Quantity_Unit}}"/>
-            <label for="Quantity_Unit">Quantity Unit:</label>
+        
+        <div>
+        <div>
+            <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Solvent</button>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Price" type="text" name="Price" class="validate" value="{{consumable.Price}}"/>
-            <label for="Price">Price:</label>
         </div>
-        <div class="input-field col s6">
-            <input id="Currency" type="text" name="Currency" class="validate" value="{{consumable.Currency}}"/>
-            <label for="Currency">Currency:</label>
-        </div>
-    </div>
-
-<div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Update Consumable
-        <i class="material-icons right"></i>
-    </button>
-</div>
   </form>
 </div>
 

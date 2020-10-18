@@ -1,45 +1,36 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 
 <h1>Request Form</h1>
 
 <div class="row">
-    <form action="" method="POST" class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="Name" type="text" name="Name" class="validate">
-          <label for="name">Name:</label>
+    <form action="{{ url_for('addrequest') }}" method="POST" class="col">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="Name" placeholder="Name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Supplier" placeholder="Supplier">
+            </div>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="Cat_no" placeholder="Cat no">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Min_Quantity" placeholder="Min Quantity">
+            </div>
         </div>
-        <div class="input-field col s6">
-          <input id="Supplier" type="text" name="Supplier" class="validate">
-          <label for="Supplier">Supplier:</label>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="Size" placeholder="Size">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Date_required" placeholder="Date required">
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="Cat_no" type="text" name="Cat_no" class="validate">
-          <label for="cat_no">Cat number:</label>
+        <div>
+            <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Request</button>
         </div>
-        <div class="input-field col s6">
-          <input id="Min_Quantity" type="text" name="Min_Quantity" class="validate">
-          <label for="Min_Quantity">Min Quantity:</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="Size" type="text" name="Size" class="validate">
-          <label for="Size">Size:</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="Date_required" type="text" name="Date_required" class="validate">
-          <label for="Date_required">Date_required:</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="Comments" class="materialize-textarea"></textarea>
-          <label for="Comments">Comments:</label>
-        </div>
-      </div>
     </form>
   </div>
 

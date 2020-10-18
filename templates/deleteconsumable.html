@@ -7,16 +7,15 @@
 <div class="row">
     <form action="{{url_for('deleteconsumable', consumable_id=consumable._id)}}" method="POST" class="col s12">
         <div class="row">
-            <div class="input-field col s6">
-                <input id="Name" type="text" name="Name" class="validate" value="{{consumable.Name}}">
-                <label for="Name"></label>
+            <div class="col">
+                <input type="text" class="form-control" name="Name" placeholder="Name" value="{{consumable.Name}}">
             </div>
-            <div class="input-field col s6">
-                <input id="Cat_no" type="text" name="Cat_no" class="validate" value="{{consumable.Cat_no}}">
-                <label for="Cat_no">Cat no:</label>
+            <div class="col">
+                <input type="text" class="form-control" name="Supplier" placeholder="Supplier" value="{{consumable.Cat_no}}">
             </div>
         <div>
-        <a class="col-2 btn-floating btn-large waves-effect waves-light aqua" href="{{url_for('deleteconsumable_delete', consumable_id=consumable._id)}}"><i class="fas fa-trash-alt"></i></a>
+        <a class="col-2 btn-floating btn-large waves-effect waves-light" href="{{url_for('deleteconsumable_delete', consumable_id=consumable._id)}}"><i class="fas fa-trash-alt"></i></a>
+        </div>
     </form>
 </div>
 </div>

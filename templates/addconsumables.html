@@ -3,57 +3,44 @@
 <h1>AdminConsumables</h1>
 
 <div class="row">
-  <form action="{{ url_for('addconsumables_add') }}" method="POST" class="col s12">
+  <form action="{{ url_for('addconsumables_add') }}" method="POST" class="form-row">
 
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Name" type="text" name="Name" class="validate" />
-            <label for="name">Name:</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="Supplier" type="text" name="Supplier" class="validate" />
-            <label for="Supplier">Supplier:</label>
-        </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" name="Name" placeholder="Name">
     </div>
-
-
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Cat_no" type="text" name="Cat_no" class="validate" />
-            <label for="cat_no">Cat number:</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="Min_Quantity" type="text" name="Min_Quantity" class="validate"/>
-            <label for="Min_Quantity">Min Quantity:</label>
-        </div>
+    <div class="col">
+      <input type="text" class="form-control" name="Supplier" placeholder="Supplier">
     </div>
-
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Quantity_Available" type="text" name="Quantity_Available" class="validate"/>
-            <label for="Quantity_Available">Quantity Available:</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="Quantity_Unit" type="text" name="Quantity_Unit" class="validate"/>
-            <label for="Quantity_Unit">Quantity Unit:</label>
-        </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" name="Cat_no" placeholder="Cat no">
     </div>
-
-    <div class="row">
-        <div class="input-field col s6">
-            <input id="Price" type="text" name="Price" class="validate"/>
-            <label for="Price">Price:</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="Currency" type="text" name="Currency" class="validate"/>
-            <label for="Currency">Currency:</label>
-        </div>
+    <div class="col">
+      <input type="text" class="form-control" name="Min_Quantity" placeholder="Min Quantity">
     </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" name="Quantity_Available" placeholder="Quantity Available">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" name="Quantity_Unit" placeholder="Quantity Unit">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" name="Price" placeholder="Price">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" name="Comment" placeholder="Comment">
+    </div>
+  </div>
+
 
 <div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit Consumable
-        <i class="material-icons right"></i>
-    </button>
+    <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Consumable</button>
 </div>
   </form>
 </div>
