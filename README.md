@@ -33,7 +33,7 @@ Icons have be taken from the [font awesome website]( https://fontawesome.com/) a
 ## Colours:
 The colours which I have used are in keeping with the main image  of the coloured beakers.
 They are:
-*
+* rgb(83, 226, 226) - an aqua colour.
 *
 *
 *
@@ -44,7 +44,19 @@ wireframes.
 
 ## Bugs:
 Problem-
+Headers for document appear for each product
 Fix-
+Potential fix, move table header out of 'for' loop.
+
+Problem-
+When delete button pressed confirmation delete page appears, cannot move data for object across.
+Fix-
+
+Problem-
+
+Fix-
+
+
 
 ## Technologies used:
 * HTML
