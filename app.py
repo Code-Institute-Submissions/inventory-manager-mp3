@@ -40,11 +40,6 @@ def consumables():
     return render_template("consumables.html", consumables=mongo.db.consumables.find())
 
 
-@app.route('/request_table')
-def request_table():
-    return render_template("request_table.html")
-
-
 @app.route('/addsolvents')
 def addsolvents():
     return render_template("addsolvents.html")
@@ -79,7 +74,6 @@ def solchange(solvent_id):
         'Comment': request.form.get('Comment')
     })
     return redirect(url_for('solvents'))
-
 
 
 @app.route('/deletesolvent/<solvent_id>')
@@ -138,6 +132,29 @@ def deleteconsumable(consumable_id):
 def deleteconsumable_delete(consumable_id):
     mongo.db.consumables.remove({'_id': ObjectId(consumable_id)})
     return redirect(url_for('consumables'))
+
+
+@app.route('/request_table')
+def request_table():
+    return render_template("request_table.html")
+
+
+@app.route('/requests')
+def requests():
+    return render_template("requests.html", requests=mongo.db.requests.find())
+
+
+@app.route('/addrequest', methods=['POST'])
+def addrequest():
+    requests = mongo.db.requests
+    requests.insert_one(request.form.to_dict())
+    return redirect(url_for('request_table'))
+
+
+@app.route('/requests_delete/<req_id>')
+def requests_delete(req_id):
+    mongo.db.requests.remove({'_id': ObjectId(req_id)})
+    return redirect(url_for('requests'))
 
 
 if __name__ == '__main__':
