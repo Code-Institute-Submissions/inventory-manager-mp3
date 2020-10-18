@@ -1,22 +1,25 @@
 {% extends 'base.html' %} 
 {% block content %}
 
-<h1>AdminSolvents</h1>
-
+<h1>Delete Solvent</h1>
+<h3>Please confirm your selection before deleting</h3>
+<div class="container">
 <div class="row">
-    <form action="" class="col s12">
-    <div class="row">
-        <div class="input-field col s12">
-            <select id="solvent" name="Name">
-                <option value="" disabled selected>Solvent</option>
-                    {% for solvent in solvents %}
-                <option value="{{solvent.Name}}">{{solvent.Name}}</option>
-                    {% endfor %}
-            </select>
-            <label>Solvents to delete</label>
-        </div>
-    </div>
+    <form action="{{url_for('deletesolvent', solvent_id=solvent._id)}}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="Name" type="text" name="Name" class="validate" value="{{solvent.Name}}">
+                <label for="Name"></label>
+            </div>
+            <div class="input-field col s6">
+                <input id="Cat_no" type="text" name="Cat_no" class="validate" value="{{solvent.Cat_no}}">
+                <label for="Cat_no">Cat no:</label>
+            </div>
+        <div>
+        <a class="col-2 btn-floating btn-large waves-effect waves-light aqua" href="{{url_for('deletesolvent_delete', solvent_id=solvent._id)}}"><i class="fas fa-trash-alt"></i></a>
     </form>
-  </div>
+</div>
+</div>
+  
 
 {% endblock %}
