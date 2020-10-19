@@ -2,55 +2,59 @@
 {% block content %}
 
 <h1>Add Solvents</h1>
-<div class="container">
-<div class="row">
+<p>Please complete the form below and submit</p>
+
 <form action="{{ url_for('addsolvents_add') }}" method="POST" class="form-row">
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" name="Name" placeholder="Name">
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Name" placeholder="Name">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" name="Supplier" placeholder="Supplier">
+    <div class="form-group col-md-6">
+         <input type="text" class="form-control" name="Supplier" placeholder="Supplier">
     </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" name="Cat_no" placeholder="Cat no">
+</div>
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Cat_no" placeholder="Cat no">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" name="Grade" placeholder="Grade">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Grade" placeholder="Grade">
     </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
+</div>
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
       <input type="text" class="form-control" name="Min_Quantity" placeholder="Min Quantity">
     </div>
-    <div class="col">
+    <div class="form-group col-md-6">
       <input type="text" class="form-control" name="Quantity_Available" placeholder="Quantity Available">
     </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" name="Quantity_Unit" placeholder="Quantity Unit">
+</div>
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Quantity_Unit" placeholder="Quantity Unit">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" name="Price" placeholder="Price">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Price" placeholder="Price">
     </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
+</div>
+
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
       <input type="text" class="form-control" name="Currency" placeholder="Currency">
     </div>
-    <div class="col">
+    <div class="form-group col-md-6">
       <input type="text" class="form-control" name="Comment" placeholder="Comment">
     </div>
-  </div>
+</div>
 
 <div>
     <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Solvent</button>
 </div>
     </form>
-  </div>
-</div>
 
 {% endblock %}
