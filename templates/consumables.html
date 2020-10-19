@@ -1,16 +1,29 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Consumables page</h1>
+<h1>Consumables Inventory</h1>
 
 {% for consumable in consumables %}
 
-<table class="responsive-table">
+<table class="col-12 responsive-table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Supplier</th>
       <th>Cat no</th>
       <th>Min Quantity</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>{{consumable.Name}}</td>
+      <td>{{consumable.Supplier}}</td>
+      <td>{{consumable.Cat_no}}</td>
+      <td>{{consumable.Min_Quantity}}</td>
+    </tr>
+  </tbody>
+    <thead>
+    <tr>
       <th>Quantity Available</th>
       <th>Quantity Unit</th>
       <th>Price</th>
@@ -20,10 +33,6 @@
 
   <tbody>
     <tr>
-      <td><h5>{{consumable.Name}}</h5></td>
-      <td>{{consumable.Supplier}}</td>
-      <td>{{consumable.Cat_no}}</td>
-      <td>{{consumable.Min_Quantity}}</td>
       <td>{{consumable.Quantity_Available}}</td>
       <td>{{consumable.Quantity_Unit}}</td>
       <td>{{consumable.Price}}</td>
@@ -31,4 +40,8 @@
     </tr>
   </tbody>
 </table>
-{% endfor %} {% endblock %}
+<a class="col-2 btn-floating btn-large waves-effect waves-light aqua" href="{{url_for('conquantchange', consumable_id=consumable._id)}}"><i class="fas fa-user-edit"></i></a>
+<a class="col-2 btn-floating btn-large waves-effect waves-light aqua" href="{{url_for('deleteconsumable', consumable_id=consumable._id)}}"><i class="fas fa-trash-alt"></i></a>
+<hr>
+{% endfor %} 
+{% endblock %}

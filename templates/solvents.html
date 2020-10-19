@@ -1,10 +1,11 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 
-<h1>Solvents page</h1>
+<h1>Solvents Stock Room</h1>
 
 {% for solvent in solvents %}
-<table class="responsive-table .table-striped">
+
+<table class="col-12 responsive-table">
   <thead>
     <tr>
       <th>Name</th>
@@ -12,6 +13,19 @@
       <th>Cat no</th>
       <th>Grade</th>
       <th>Min Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{solvent.Name}}</td>
+      <td>{{solvent.Supplier}}</td>
+      <td>{{solvent.Cat_no}}</td>
+      <td>{{solvent.Grade}}</td>
+      <td>{{solvent.Min_Quantity}}</td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
       <th>Quantity Available</th>
       <th>Quantity Unit</th>
       <th>Price</th>
@@ -19,14 +33,8 @@
       <th>Comment</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
-      <td><h5>{{solvent.Name}}</h5></td>
-      <td>{{solvent.Supplier}}</td>
-      <td>{{solvent.Cat_no}}</td>
-      <td>{{solvent.Grade}}</td>
-      <td>{{solvent.Min_Quantity}}</td>
       <td>{{solvent.Quantity_Available}}</td>
       <td>{{solvent.Quantity_Unit}}</td>
       <td>{{solvent.Price}}</td>
@@ -35,4 +43,17 @@
     </tr>
   </tbody>
 </table>
-{% endfor %} {% endblock %}
+<a
+  class="col-2 btn-floating btn-large waves-effect waves-light aqua"
+  href="{{url_for('solquantchange', solvent_id=solvent._id)}}"
+  ><i class="fas fa-user-edit"></i
+></a>
+<a
+  class="col-2 btn-floating btn-large waves-effect waves-light aqua"
+  href="{{url_for('deletesolvent', solvent_id=solvent._id)}}"
+  ><i class="fas fa-trash-alt"></i
+></a>
+<hr>
+
+{% endfor %}
+{% endblock %}
