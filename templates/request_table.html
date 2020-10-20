@@ -2,37 +2,41 @@
 {% block content %}
 
 <h1>Request Form</h1>
+<p>Please complete the request form and your product will be ordered and added to our inventory</p>
 
-<div class="row">
-    <form action="{{ url_for('addrequest') }}" method="POST" class="col">
-        <div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" name="Name" placeholder="Name">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" name="Supplier" placeholder="Supplier">
-            </div>
-        <div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" name="Cat_no" placeholder="Cat no">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" name="Min_Quantity" placeholder="Min Quantity">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" name="Size" placeholder="Size">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" name="Date_required" placeholder="Date required">
-            </div>
-        </div>
-        <div>
-            <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Request</button>
-        </div>
-    </form>
-  </div>
+<form action="{{ url_for('addrequest') }}" method="POST" class="col">
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Name" placeholder="Name">
+    </div>
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Supplier" placeholder="Supplier">
+    </div>
+</div>
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Cat_no" placeholder="Cat no">
+    </div>
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Min_Quantity" placeholder="Min Quantity">
+    </div>
+</div>
+
+<div class="form-row col-12">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Size" placeholder="Size">
+    </div>
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="Date_required" placeholder="Date required">
+    </div>
+</div>
+<div>
+    <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Request</button>
+</div>
+</form>
+
 
 {% endblock %}
 
