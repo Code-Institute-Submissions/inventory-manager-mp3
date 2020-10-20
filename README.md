@@ -23,6 +23,8 @@ The requirements for the application are as follows:
 * New products can be added.
 * Products which are no longer required can be removed from the database.
 * New products can be requested.
+* Requests are captured in a collection.
+* Requests are displayed and can be deleted.
 * Navigation between pages.
 
 ## Design:
@@ -33,12 +35,13 @@ Icons have be taken from the [font awesome website]( https://fontawesome.com/) a
 ## Colours:
 The colours which I have used are in keeping with the main image  of the coloured beakers.
 They are:
-* rgb(83, 226, 226) - an aqua colour.
-*
-*
-*
+* Navbar and footer - #070707. This is a dark grey/blue to compliment the background of the image.
+* Navbar and footer text - #ff6c00. A vibrate orange matching one of the liquids in a beaker.
+* Edit and delete icons - #ff6c00. Again in line with the main image.
+* Buttons - #30eef5. This is to match the aqua colour beaker. The text is in the same colour spectrum but a darker version, #071213.
+
 ## Wireframe:
-wireframes.
+The wireframe document can be found at [wireframes](https://github.com/hob71/inventory-manager-mp3/tree/master/wireframes).
 
 ## Testing:
 
@@ -46,15 +49,22 @@ wireframes.
 Problem-
 Headers for document appear for each product
 Fix-
-Potential fix, move table header out of 'for' loop.
+Potential fix, move table header out of 'for' loop. To investigate.
 
 Problem-
 When delete button pressed confirmation delete page appears, cannot move data for object across.
 Fix-
+App was looking for a html page which did not extist and was be called.
+
+Problem-
+Was unable to see database in Heroku app.
+Fix-
+Needed to add the MONGO_URI to the keys.
 
 Problem-
 
 Fix-
+
 
 
 
