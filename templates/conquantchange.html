@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Update Consumables</h1>
+<p>Please correct the required fields and update.</p>
 
 <div class="row">
   <form action="{{url_for('conchange', consumable_id=consumable._id)}}" method="POST" class="col s12">
@@ -43,7 +44,7 @@
         
         <div>
         <div>
-            <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Solvent</button>
+            <button class="btn btn-primary btn-sm" type="submit" name="action">Update Consumable</button>
         </div>
         </div>
   </form>

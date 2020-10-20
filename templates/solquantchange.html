@@ -2,6 +2,7 @@
 {% block content %}
 
 <h1>Solvent Update</h1>
+<p>Please correct the required fields and update.</p>
 
 <div class="row">
     <form action="{{url_for('solchange', solvent_id=solvent._id)}}" method="POST" class="col s12">
@@ -47,12 +48,13 @@
                 <input type="text" class="form-control" name="Currency" placeholder="Currency" value="{{solvent.Currency}}">
             </div>
             <div class="col">
+            <label>Comment:</label>
                 <input type="text" class="form-control" name="Comment" placeholder="Comment" value="{{solvent.Name}}">
             </div>
         </div>
         <div>
         <div>
-            <button class="btn btn-primary btn-sm" type="submit" name="action">Submit Solvent</button>
+            <button class="btn btn-primary btn-sm" type="submit" name="action">Update Solvent</button>
         </div>
         </div>
     </form>
