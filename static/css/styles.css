@@ -101,7 +101,7 @@ td, th {
 }
 
 .form-control {
-    margin: 12px 0px;
+    margin: 8px 0px;
     padding: 6px 4px;
 }
 
@@ -145,6 +145,7 @@ btn-gen {
 label {
     padding-bottom: 0px;
     font-size: 0.7rem;
+    margin-bottom: 0px;
 }
 
 .fas {
