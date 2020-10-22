@@ -5,20 +5,26 @@ The project ‘**Inventory Manager**’ is based on stock control within a resea
 ## UX:
 ### User Goals
 * Build an app that allows the user to search for products held within a stock room.
-* User should be able to update the quantity remaining.
+* User should be able to update the fields, mainly quantity available for day to day use.
 * User can request for new products to be added through a request form.
-* Administrator can create, update, delete and search for products.
-* Administrator level is password protected.
+* The application can display stocks, update, delete and add new products.
+* Requests for new products can be sent to the admin page.
+* Administrator level is password protected, nice to have.
 * Interface is easy to use and navigate through.
+* application should be responsive.
 
 ## User ideas:
-* “Update function should be available”
+* "Update function should be available"
+* "Incorporate text to guide new users"
+* "Products cannot be delete easily"
+* "Fields should be prepopulated"
 
 ## Requirements:
 The requirements for the application are as follows:
 * User can see what is available in both categories.
 * Quantities can be updated when products are removed.
-* Navigation bar will collapse on mobile devices.
+* All properties can be editable incase of changes to produces, for example catalogue number changes.
+* Navigation bar will have drop down for administrative items.
 * Products can be edited.
 * New products can be added.
 * Products which are no longer required can be removed from the database.
@@ -28,12 +34,17 @@ The requirements for the application are as follows:
 * Navigation between pages.
 
 ## Design:
-The design for this application is based around multiple pages. Some of these pages are available via the navigation bar whilst others will appear depending on the function requested. The pages available via the navigation bar will be home, solvents, consumables, requests and admin page. The solvent and consumable pages will be similar in style but will have different fields.
+The design for this application is based around multiple pages. Some of these pages are available via the navigation bar whilst others will appear depending on the function requested. 
+The pages available via the navigation bar will be home, solvents, consumables, requests and admin page. The solvent and consumable pages will be similar in style but will have different fields, the icons will link to either a page for editting fields, mainly used for the quantity available, and there you can update the database. 
+With the trash icon this will take to a page so that you can confirm the deletion of a record. 
+This page will display the name and catalogue number of the product you were trying to delete. 
+This is a safe guard as not to delete the product by accident of the stock page.
+A small description will also be added to the pages. Page layout will be simple and the colours will match the imagery of the banner.
 ## Images:
 Icons have be taken from the [font awesome website]( https://fontawesome.com/) and the main image is from [](). The main image used is glass beakers filled with coloured liquids and I believe this represents well a laboratory environment.
 ## Fonts:
 ## Colours:
-The colours which I have used are in keeping with the main image  of the coloured beakers.
+The colours which I have used are in keeping with the main image of the coloured beakers.
 They are:
 * Navbar and footer - #070707. This is a dark grey/blue to compliment the background of the image.
 * Navbar and footer text - #ff6c00. A vibrate orange matching one of the liquids in a beaker.
@@ -90,4 +101,5 @@ The code in the deployed version is the same as my gitpod repository.
 ## Credits:
 * Font Awesome for icons.
 ## Acknowledge:
-## Final Notes:
+## Final Notes and Future Additions:
+
