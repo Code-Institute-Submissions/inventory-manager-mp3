@@ -24,6 +24,12 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 
+mysol = mongo.db.solvents.find()
+sol_count = mysol.count()
+
+myconsumables = 12
+
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -32,12 +38,16 @@ def index():
 
 @app.route('/solvents')
 def solvents():
-    return render_template("solvents.html", solvents=mongo.db.solvents.find())
+    mysol = mongo.db.solvents.find()
+    sol_count = mysol.count()
+    return render_template("solvents.html", solvents=mongo.db.solvents.find(), sol_count=sol_count)
 
 
 @app.route('/consumables')
 def consumables():
-    return render_template("consumables.html", consumables=mongo.db.consumables.find())
+    mycon = mongo.db.consumables.find()
+    con_count = mycon.count()
+    return render_template("consumables.html", consumables=mongo.db.consumables.find(), con_count=con_count)
 
 
 @app.route('/addsolvents')
