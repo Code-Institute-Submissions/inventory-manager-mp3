@@ -1,15 +1,26 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
+
+<h1>New items for ordering / reorder</h1>
 
 {% for req in requests %}
 
-    <div class="card">
-         <h5 class="card-header">Name: {{req.Name}}</h5>
-            <div class="card-body">
-                <p class="card-text">Supplier: {{req.Supplier}} / Cat no: {{req.Cat_no}} / Min Quantity: {{req.Min_Quantity}} / Size: {{req.Size}} / Date Required: {{req.Date_required}}</p>
-                <a href="{{url_for('requests_delete', req_id=req._id)}}" class="btn btn-primary">Completed</a>
-             </div>
-    </div>
+<div class="card">
+  <h5 class="card-header">Name: {{req.Name}}</h5>
+  <div class="card-body">
+    <p class="card-text">
+      Supplier: {{req.Supplier}} / Cat no: {{req.Cat_no}} / Min Quantity:
+      {{req.Min_Quantity}} / Size: {{req.Size}} / Date Required:
+      {{req.Date_required}}
+    </p>
+    <a
+      href="{{url_for('requests_delete', req_id=req._id)}}"
+      class="btn btn-primary"
+      >Completed</a
+    >
+  </div>
+</div>
+<br />
 
 {% endfor %}
 {% endblock %}

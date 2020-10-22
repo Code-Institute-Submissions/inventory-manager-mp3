@@ -2,6 +2,9 @@
 {% block content %}
 
 <h1>Solvents Stock Room</h1>
+<p>
+  Please update the quantity via the edit icon,<i class="fas fa-user-edit"></i>.
+</p>
 
 {% for solvent in solvents %}
 
@@ -51,9 +54,9 @@
 <a
   class="col-2 btn-floating btn-large waves-effect waves-light"
   href="{{url_for('deletesolvent', solvent_id=solvent._id)}}"
-  ><i class="fas fa-trash-alt"></i
-></a>
-<hr>
+  ><i class="fas fa-trash-alt"></i>
+</a>
+<hr />
 
 {% endfor %}
 {% endblock %}

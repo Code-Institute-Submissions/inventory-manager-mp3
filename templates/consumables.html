@@ -1,6 +1,10 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 
 <h1>Consumables Inventory</h1>
+<p>
+  Please update the quantity via the edit icon,<i class="fas fa-user-edit"></i>.
+</p>
 
 {% for consumable in consumables %}
 
@@ -22,7 +26,7 @@
       <td>{{consumable.Min_Quantity}}</td>
     </tr>
   </tbody>
-    <thead>
+  <thead>
     <tr>
       <th>Quantity Available</th>
       <th>Quantity Unit</th>
@@ -40,8 +44,17 @@
     </tr>
   </tbody>
 </table>
-<a class="col-2 btn-floating btn-large waves-effect waves-light aqua" href="{{url_for('conquantchange', consumable_id=consumable._id)}}"><i class="fas fa-user-edit"></i></a>
-<a class="col-2 btn-floating btn-large waves-effect waves-light aqua" href="{{url_for('deleteconsumable', consumable_id=consumable._id)}}"><i class="fas fa-trash-alt"></i></a>
-<hr>
+<a
+  class="col-2 btn-floating btn-large waves-effect waves-light aqua"
+  href="{{url_for('conquantchange', consumable_id=consumable._id)}}"
+  ><i class="fas fa-user-edit"></i
+></a>
+<a
+  class="col-2 btn-floating btn-large waves-effect waves-light aqua"
+  href="{{url_for('deleteconsumable', consumable_id=consumable._id)}}"
+  ><i class="fas fa-trash-alt"></i
+></a>
+<hr />
+
 {% endfor %} 
 {% endblock %}
