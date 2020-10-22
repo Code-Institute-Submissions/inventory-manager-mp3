@@ -32,6 +32,7 @@ The requirements for the application are as follows:
 * Requests are captured in a collection.
 * Requests are displayed and can be deleted.
 * Navigation between pages.
+* Counter for number of products available.
 
 ## Design:
 The design for this application is based around multiple pages. Some of these pages are available via the navigation bar whilst others will appear depending on the function requested. 
@@ -40,9 +41,13 @@ With the trash icon this will take to a page so that you can confirm the deletio
 This page will display the name and catalogue number of the product you were trying to delete. 
 This is a safe guard as not to delete the product by accident of the stock page.
 A small description will also be added to the pages. Page layout will be simple and the colours will match the imagery of the banner.
+
 ## Images:
-Icons have be taken from the [font awesome website]( https://fontawesome.com/) and the main image is from [](). The main image used is glass beakers filled with coloured liquids and I believe this represents well a laboratory environment.
+Icons have be taken from the [font awesome website]( https://fontawesome.com/) and the main image is from [Freepik website](https://www.freepik.com/photos/background). Image is called Group of Liquids. The main image used is glass beakers filled with coloured liquids and I believe this represents well a laboratory environment.
+<a href="https://www.freepik.com/photos/background">Background photo created by pressfoto - www.freepik.com</a>
 ## Fonts:
+I have chosen the [Google Fonts](https://fonts.google.com).
+
 ## Colours:
 The colours which I have used are in keeping with the main image of the coloured beakers.
 They are:
@@ -55,29 +60,37 @@ They are:
 The wireframe document can be found at [wireframes](https://github.com/hob71/inventory-manager-mp3/tree/master/wireframes).
 
 ## Testing:
+![Add item record]()
+![Delete item record]()
+![Edit item record]()
+![Count change]()
+![Add request]()
+![complete request]()
 
 ## Bugs:
-Problem-
+**Problem-**
 Headers for document appear for each product
-Fix-
+**Fix-**
 Potential fix, move table header out of 'for' loop. To investigate.
 
-Problem-
+**Problem-**
 When delete button pressed confirmation delete page appears, cannot move data for object across.
-Fix-
+**Fix-**
 App was looking for a html page which did not extist and was be called.
 
-Problem-
+**Problem-**
 Was unable to see database in Heroku app.
-Fix-
+**Fix-**
 Needed to add the MONGO_URI to the keys.
 
-Problem-
+**Problem-**
+Product count collects correct value but does not refresh on deletion or creation of record.
+**Fix-**
+Variables moved into app route and then changes picked up.
 
-Fix-
+**Problem-**
 
-
-
+**Fix-**
 
 ## Technologies used:
 * HTML
@@ -87,19 +100,25 @@ Fix-
 * Flask
 * Python
 * MongoDB
+* Pymongo
 
 ## Deployment:
 
 
 Below are links to my GitHub and published sites.
 
-#### Published site: 
-#### GitHub site: https://github.com/hob71/
+#### Published site: https://inventory-manager-mp3.herokuapp.com/
+#### GitHub site: https://github.com/hob71/inventory-manager-mp3
 
 The code in the deployed version is the same as my gitpod repository.
 
 ## Credits:
 * Font Awesome for icons.
+* Thanks go to the author of the background image. Background photo created by pressfoto - www.freepik.com
+
 ## Acknowledge:
+
+
+
 ## Final Notes and Future Additions:
 
