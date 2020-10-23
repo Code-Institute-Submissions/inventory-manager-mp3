@@ -64,12 +64,19 @@ The wireframes are an initial representation of how I designed the layout. There
 The wireframe document can be found at [wireframes](https://github.com/hob71/inventory-manager-mp3/tree/master/wireframes).
 
 ## Testing:
-![Screen shot after record added and counter increases](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_add.PNG)
-![Screen shot after deletion of record and counter decrease](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_delete.PNG)
-![Edit item record](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/edited_comment.PNG)
+Testing was carried out on the functions required for the user. These included  adding records, editting records, deleting record and finding number of records in collection.
+* Screen shot of database with one record.
 ![Screen shot before adding record](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/before_add.PNG)
-![Add request]()
-![complete request]()
+* Added additional recorded, now two records display and number of item has increased to two.
+![Screen shot after record added and counter increases](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_add.PNG)
+* Pressed delete icon and deleted original entry and now one record and number of items changed to one.
+![Screen shot after deletion of record and counter decrease](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_delete.PNG)
+* Pressed edit icon and updated the record with a comment.
+![Screen shot of editted record. Comment added.](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/edited_comment.PNG)
+* Active requests page with one entry.
+![Screen shot of requests page before addition](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/request_before_add.PNG)
+* Requests page after ne request placed.
+![Requests page after new entry](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/request_after_add.PNG)
 
 ## Bugs:
 **Problem-**
@@ -95,6 +102,7 @@ Variables moved into app route and then changes picked up.
 **Problem-**
 An 'action' field is appearing in the mongo db.
 **Fix-**
+Found name="action" code in the button. Once removed database entries were correct.
 
 ## Technologies used:
 * HTML
