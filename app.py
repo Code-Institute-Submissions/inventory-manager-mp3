@@ -24,12 +24,6 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 
-mysol = mongo.db.solvents.find()
-sol_count = mysol.count()
-
-myconsumables = 12
-
-
 @app.route('/')
 @app.route('/index')
 def index():
