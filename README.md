@@ -1,6 +1,9 @@
 # Inventory Manager MP3
 ## Introduction:
-The project ‘**Inventory Manager**’ is based on stock control within a research and development company. There are two different types of stock which are generally held, these are solvents (ethanol, methanol, dimethylsulfoxide etc) and consumables (pipettes, plates, tips, labels etc). All these items must be tracked to make sure the storeroom / warehouse does not run out and can reorder in time. The application will hold information around products which are held on stock, minimum quantities required before ordering and the ability to add, update and delete products when are no longer required.
+The project ‘**Inventory Manager**’ is based on stock control within a research and development company. 
+There are two different types of stock which are generally held, these are solvents (ethanol, methanol, dimethylsulfoxide etc) and consumables (pipettes, plates, tips, labels etc). 
+All these items must be tracked to make sure the storeroom / warehouse does not run out and can reorder in time. 
+The application will hold information around products which are held on stock, minimum quantities required before ordering and the ability to add, update and delete products when are no longer required.
 
 ## UX:
 ### User Goals
@@ -51,19 +54,20 @@ I have chosen the [Google Fonts](https://fonts.google.com).
 ## Colours:
 The colours which I have used are in keeping with the main image of the coloured beakers.
 They are:
-* Navbar and footer - #070707. This is a dark grey/blue to compliment the background of the image.
-* Navbar and footer text - #ff6c00. A vibrate orange matching one of the liquids in a beaker.
-* Edit and delete icons - #ff6c00. Again in line with the main image.
-* Buttons - #30eef5. This is to match the aqua colour beaker. The text is in the same colour spectrum but a darker version, #071213.
+* #070707. Navbar and footer - This is a dark grey/blue to compliment the background of the image.
+* #ff6c00. Navbar and footer text - A vibrate orange matching one of the liquids in a beaker.
+* #ff6c00. Edit and delete icons - Again in line with the main image.
+* #30eef5. Buttons - This is to match the aqua colour beaker. The text is in the same colour spectrum but a darker version, #071213.
 
 ## Wireframe:
+The wireframes are an initial representation of how I designed the layout. There have been a few changes during th process but essentially the wireframe matches the production app.
 The wireframe document can be found at [wireframes](https://github.com/hob71/inventory-manager-mp3/tree/master/wireframes).
 
 ## Testing:
-![Add item record]()
-![Delete item record]()
-![Edit item record]()
-![Count change]()
+![Screen shot after record added and counter increases](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_add.PNG)
+![Screen shot after deletion of record and counter decrease](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_delete.PNG)
+![Edit item record](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/edited_comment.PNG)
+![Screen shot before adding record](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/before_add.PNG)
 ![Add request]()
 ![complete request]()
 
@@ -89,7 +93,7 @@ Product count collects correct value but does not refresh on deletion or creatio
 Variables moved into app route and then changes picked up.
 
 **Problem-**
-
+An 'action' field is appearing in the mongo db.
 **Fix-**
 
 ## Technologies used:
