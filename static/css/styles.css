@@ -236,12 +236,16 @@ footer {
     font-size: 1.5rem;
 }
 
-.th {
+/*.th {
     font-size: 0.6rem;
 }
 
 .td {
     font-size: 0.8rem;
+}*/
+
+td, th {
+    font-size: 0.65rem;
 }
 
 .nav-link {
