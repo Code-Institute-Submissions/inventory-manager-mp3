@@ -14,7 +14,7 @@ The application will hold information around products which are held on stock, m
 * Requests for new products can be sent to the admin page.
 * Administrator level is password protected, nice to have.
 * Interface is easy to use and navigate through.
-* application should be responsive.
+* Application should be responsive.
 
 ## User ideas:
 * "Update function should be available"
@@ -45,9 +45,21 @@ This page will display the name and catalogue number of the product you were try
 This is a safe guard as not to delete the product by accident of the stock page.
 A small description will also be added to the pages. Page layout will be simple and the colours will match the imagery of the banner.
 
+### Layout:
+* Base layer - this consists of the navbar, banner and footer and will be the same across all pages. On smaller devices only the title is displayed on the banner.
+* Index/Home - this contains four icons with a description below. Large screen the icons are side by side but will change into a column on smaller devices. The request, consumables and request icon can also link to the relevant pages.
+* Solvent / Consumables - here you will see what is available in stock. A record of number of item will be displayed and there is the functionality to search, edit and delete items. 
+The search function is not case sensitive and will display the results after button press or return key pressed. The display will change to show results, show how many results are displayed and addition button to show all records again.
+Edit will take you to edit page and delete will take you to a confirmation edit page.
+* Edit page - allows you to edit any field and submit. On submit you are returned to the solvent or consumable page.
+* Requests - displays a form, details can be entered and submitted the request page.
+* Add solvents / consumables - is a form page which allows new products t be entered and submitted to the database.
+* New Requests - a page which displays all new requests as cards with details of what is needed to be ordered. Once ordered requested can be cleared by pressing the ordered button.
+
 ## Images:
 Icons have be taken from the [font awesome website]( https://fontawesome.com/) and the main image is from [Freepik website](https://www.freepik.com/photos/background). Image is called Group of Liquids. The main image used is glass beakers filled with coloured liquids and I believe this represents well a laboratory environment.
 <a href="https://www.freepik.com/photos/background">Background photo created by pressfoto - www.freepik.com</a>
+
 ## Fonts:
 I have chosen the David Libre font from [Google Fonts](https://fonts.google.com).
 
@@ -116,6 +128,17 @@ Found name="action" code in the button. Once removed database entries were corre
 * MongoDB Compass
 
 ## Deployment:
+The project was developed in Gitpod,and pushed to GitHub and Heroku.
+
+To deploy my Hogwarts Memory Madness project the process was as follows:-
+
+Opened GitHub in web browser.
+Log in with username and password.
+Select my repositories.
+Selected my project repository, Memory Madness.
+Go to 'settings' at top of page.
+Scroll down to GitHub Pages.
+Chose master branch in 'Source' dropdown menu.
 
 
 Below are links to my GitHub and published sites.
@@ -128,10 +151,16 @@ The code in the deployed version is the same as my gitpod repository.
 ## Credits:
 * Font Awesome for icons.
 * Thanks go to the author of the background image. Background photo created by pressfoto - www.freepik.com
+* Information on how to index the collections taken from MongoDB manuals. The code which was used is `db.solvents.createIndex({ "$**": "text" },{ name: "TextIndex" })` and `db.consumables.createIndex({ "$**": "text" },{ name: "TextIndex" })`.
+* Information for creating search was found on [stackoverflow.com](https://stackoverflow.com/). The code was '{ $text : { $search: <your string> } }' and original answer was provided by Dave Adelson.
 
 ## Acknowledge:
-* Information on how to index the collections taken from MongoDB manuals. The code which was used is 'db.solvents.createIndex({ "$**": "text" },{ name: "TextIndex" })' and 'db.consumables.createIndex({ "$**": "text" },{ name: "TextIndex" })'.
-* Information for creating search was found on [stackoverflow.com](https://stackoverflow.com/). The code was '{ $text : { $search: <your string> } }' and original answer was provided by Dave Adelson.
+I would like to say thank you to my mentor, Mark Railton, and the tutors and student care at the Code Institute for the help and support they gave me.
 
 
 ## Final Notes and Future Additions:
+* Looking back at the project, even though the mongo database has worked I believe a structured (sql) database would be more suitable for a large scale system.
+* Future additions:
+    * Additoin administrator account which would restrict access to the add, delete functions.
+    * Changing the request process to also email when new requests are placed.
+    * Reorder button which would automatically send a request.
