@@ -1,70 +1,51 @@
-{% extends 'base.html' %} {% block content %}
-        <!-- Services-->
-        <section id="option-sec">
-            <div class="container options">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Options</h2>
-                    <p class="section-subheading">What's on offer.</p>
-                </div>
-                <div class="row text-center col-12">
-                    <div class="col-md-6 col-lg-3 option">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa fa-flask fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4>Solvents</h4>
-                        <p>Catalogue of solvents held in warehouse. Update quantities as they are removed.</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 option">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4>Consumables</h4>
-                        <p>Catalogue of consumable product held onstock. Update quantities as they are removed.</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 option">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4>Requests</h4>
-                        <p>Request new solvents and consumables to be purchased and add to the lists.</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 option">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4>Administrator</h4>
-                        <p>Administrator use only. Add, removing and update stock products.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {% endblock %}
- 
- 
-
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                    <div class="col-lg-4 text-lg-right">
-                        <a class="mr-3" href="#!">Privacy Policy</a>
-                        <a href="#!">Terms of Use</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<!-- Services-->
+<section id="option-sec">
+  <div class="container options">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Options</h2>
+      <p class="section-subheading">What's on offer.</p>
+    </div>
+    <div class="row text-center col-12">
+      <div class="col-md-6 col-lg-3 option">
+        <span class="fa-stack fa-4x">
+          <a href="{{url_for('solvents')}}"><i class="fas fa fa-flask fa-stack-1x fa-inverse"></i></a>
+        </span>
+        <h4>Solvents</h4>
+        <p>
+          Catalogue of solvents held in warehouse. Update quantities as they are
+          removed.
+        </p>
+      </div>
+      <div class="col-md-6 col-lg-3 option">
+        <span class="fa-stack fa-4x">
+          <a href="{{url_for('consumables')}}"><i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i></a>
+        </span>
+        <h4>Consumables</h4>
+        <p>
+          Catalogue of consumable product held onstock. Update quantities as
+          they are removed.
+        </p>
+      </div>
+      <div class="col-md-6 col-lg-3 option">
+        <span class="fa-stack fa-4x">
+          <a href="{{url_for('request_table')}}"><i class="fas fa-laptop fa-stack-1x fa-inverse" href="{{url_for('request_table')}}"></i></a>
+        </span>
+        <h4>Requests</h4>
+        <p>
+          Request new solvents and consumables to be purchased and add to the
+          lists.
+        </p>
+      </div>
+      <div class="col-md-6 col-lg-3 option">
+        <span class="fa-stack fa-4x">
+          <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4>Administrator</h4>
+        <p>Administrator use only. Add, removing and update stock products.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
