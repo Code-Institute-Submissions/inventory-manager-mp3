@@ -10,9 +10,9 @@
 			<strong>{{consumable.Cat_no}}</strong>. Please press delete to continue with action or cancel to retun to
 			consumable inventory.</p>
 	</div>
-	<div class="row">
-		<a href="{{url_for('deleteconsumable_delete', consumable_id=consumable._id)}}" class="btn btn-primary">Delete</a> 
-        <a href="{{url_for('consumables')}}" class="btn btn-primary">Cancel</a>
+	<div class="row delete-row">
+		<a href="{{url_for('deleteconsumable_delete', consumable_id=consumable._id)}}" class="btn-delete btn btn-primary">Delete</a> 
+        <a href="{{url_for('consumables')}}" class="btn-delete btn btn-primary">Cancel</a>
 	</div>
 </div>
 

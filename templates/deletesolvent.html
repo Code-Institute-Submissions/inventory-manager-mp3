@@ -10,9 +10,9 @@
 			<strong>{{solvent.Cat_no}}</strong>. Please press delete to continue with action or cancel to retun to
 			solvents inventory.</p>
 	</div>
-	<div class="row">
-		<a href="{{url_for('deletesolvent_delete', solvent_id=solvent._id)}}" class="btn btn-primary">Delete</a>
-        <a href="{{url_for('solvents')}}" class="btn btn-primary">Cancel</a>
+	<div class="row delete-row">
+		<a href="{{url_for('deletesolvent_delete', solvent_id=solvent._id)}}" class="btn-delete btn btn-primary">Delete</a>
+        <a href="{{url_for('solvents')}}" class="btn-delete btn btn-primary">Cancel</a>
 	</div>
 </div>
 

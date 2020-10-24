@@ -92,6 +92,10 @@ section {
     min-height: 37rem;
 }
 
+.search-row, .delete-row {
+    justify-content: center;
+}
+
 /*-------------------table-----------------*/
 
 td, th {
@@ -121,16 +125,15 @@ td, th {
     margin-left: 1rem;
 }
 
-/*-------------------Map-----------------*/
-
-#map {
-  height: 400px;
-  width: 100%;
+.btn-search, .btn-delete {
+    height: 2.1rem;
+    width: 5rem;
+    margin-top: 11px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 /*-------------------General-----------------*/
-
-
 
 btn-gen {
     margin-bottom: 3rem;
@@ -186,8 +189,6 @@ footer {
 }
 
 
-
-
 /*-------------------colours-----------------*/
 
 .navbar, footer, .dropdown-menu {
@@ -209,9 +210,6 @@ footer {
     background-color:#30eef5;
     border-color: #30eef5;
 }
-
-
-
 
 
 @media screen and (max-width: 992px) {
@@ -242,7 +240,5 @@ footer {
 .td {
     font-size: 0.8rem;
 }
-
-
 
 }
