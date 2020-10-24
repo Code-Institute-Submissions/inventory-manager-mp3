@@ -49,7 +49,7 @@ A small description will also be added to the pages. Page layout will be simple 
 Icons have be taken from the [font awesome website]( https://fontawesome.com/) and the main image is from [Freepik website](https://www.freepik.com/photos/background). Image is called Group of Liquids. The main image used is glass beakers filled with coloured liquids and I believe this represents well a laboratory environment.
 <a href="https://www.freepik.com/photos/background">Background photo created by pressfoto - www.freepik.com</a>
 ## Fonts:
-I have chosen the [Google Fonts](https://fonts.google.com).
+I have chosen the David Libre font from [Google Fonts](https://fonts.google.com).
 
 ## Colours:
 The colours which I have used are in keeping with the main image of the coloured beakers.
@@ -113,6 +113,7 @@ Found name="action" code in the button. Once removed database entries were corre
 * Python
 * MongoDB
 * Pymongo
+* MongoDB Compass
 
 ## Deployment:
 
@@ -129,8 +130,8 @@ The code in the deployed version is the same as my gitpod repository.
 * Thanks go to the author of the background image. Background photo created by pressfoto - www.freepik.com
 
 ## Acknowledge:
-
+* Information on how to index the collections taken from MongoDB manuals. The code which was used is 'db.solvents.createIndex({ "$**": "text" },{ name: "TextIndex" })' and 'db.consumables.createIndex({ "$**": "text" },{ name: "TextIndex" })'.
+* Information for creating search was found on [stackoverflow.com](https://stackoverflow.com/). The code was '{ $text : { $search: <your string> } }' and original answer was provided by Dave Adelson.
 
 
 ## Final Notes and Future Additions:
-
