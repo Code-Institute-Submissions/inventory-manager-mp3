@@ -21,6 +21,8 @@ The application will hold information around products which are held on stock, m
 * "Incorporate text to guide new users"
 * "Products cannot be delete easily"
 * "Fields should be prepopulated"
+* "Search function would help when database is populated with many items"
+* "See how many product are available and with a search function see how many records are pulled back from the search"
 
 ## Requirements:
 The requirements for the application are as follows:
@@ -36,6 +38,7 @@ The requirements for the application are as follows:
 * Requests are displayed and can be deleted.
 * Navigation between pages.
 * Counter for number of products available.
+* Search functionality with record of results found.
 
 ## Design:
 The design for this application is based around multiple pages. Some of these pages are available via the navigation bar whilst others will appear depending on the function requested. 
@@ -131,7 +134,7 @@ An 'action' field is appearing in the mongo db.
 Found name="action" code in the button. Once removed database entries were correct.
 
 **Problem-**
-File static/assets/mail/jqBootstrapValidation.js exists in gitpod as a 'hangover' from bootstrap themes (all bbotstrap themes removed after realising not allowed for project) when I removed all the code. Unable to remove. Message 'warning: could not open directory 'static/assets/mail/': No such file or directory'
+File static/assets/mail/jqBootstrapValidation.js exists in gitpod as a 'hangover' from bootstrap themes (all bootstrap themes removed after realising not allowed for project) when I removed all the code. Unable to remove. Message 'warning: could not open directory 'static/assets/mail/': No such file or directory'
 **Fix-**
 Removed via Github and deployed to Heroku.
 
@@ -147,9 +150,35 @@ Removed via Github and deployed to Heroku.
 * MongoDB Compass
 
 ## Deployment:
-The project was developed in Gitpod,and pushed to GitHub and Heroku.
+The project was developed in Gitpod and pushed to GitHub and Heroku.
 
-To deploy my Hogwarts Memory Madness project the process was as follows:-
+To deploy my Inventory Manager project in Heroku the process was as follows:-
+
+Opened Heroku in the browser.
+Logged in with my username and password.
+Selected 'new' and 'create new app'.
+Created the name for the app, inventory-manager-mp3. Name has to be unique.
+Chose the region, Europe.
+Opened terminal window in gitpod and logged into heroku using 'heroku login -i'
+Entered my email address and password used to log into heroku app.
+In terminal window typed 'git remote heroku' and the URL provide by Heroku for my app.
+Create a 'requirements.txt' file and 'Procfile'.
+Start up a web process by typing heroku ps:scale web=1 in the terminal.
+In heroku opened up 'settings' and entered in config variables. The IP and PORT.
+In addition in variables connected the MONGO_URI.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Opened GitHub in web browser.
 Log in with username and password.
