@@ -83,8 +83,10 @@ Testing was carried out on the functions required for the user. These included  
 * Added additional recorded, new record displayed and number of item has increased.
 ![Screen shot after record added and counter increases](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_add.PNG)
 
-* Pressed delete icon, confirmation page displays and then deleted entry., Now one less record and number of items changed.
+* Pressed delete icon, confirmation page displays.and then deleted entry., Now one less record and number of items changed.
 ![Screen shot of delete confirmation](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/delete_screen.PNG)
+
+* Entry deleted. Now one less record and number of items changed.
 ![Screen shot after deletion of record and counter decrease](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_delete.PNG)
 
 * Pressed edit icon and updated the record with a comment.
@@ -127,6 +129,11 @@ Variables moved into app route and then changes picked up.
 An 'action' field is appearing in the mongo db.
 **Fix-**
 Found name="action" code in the button. Once removed database entries were correct.
+
+**Problem-**
+File static/assets/mail/jqBootstrapValidation.js exists in gitpod as a 'hangover' from bootstrap themes (all bbotstrap themes removed after realising not allowed for project) when I removed all the code. Unable to remove. Message 'warning: could not open directory 'static/assets/mail/': No such file or directory'
+**Fix-**
+Removed via Github and deployed to Heroku.
 
 ## Technologies used:
 * HTML
