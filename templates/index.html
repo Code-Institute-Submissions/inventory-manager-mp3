@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <!-- Services-->
 <section id="option-sec">
   <div class="container options">
@@ -14,8 +15,7 @@
         </span>
         <h4>Solvents</h4>
         <p>
-          Catalogue of solvents held in warehouse. Update quantities as they are
-          removed.
+          Catalogue of solvents held in warehouse. Update quantities as they are removed.
         </p>
       </div>
       <div class="col-md-6 col-lg-3 option">
@@ -24,18 +24,16 @@
         </span>
         <h4>Consumables</h4>
         <p>
-          Catalogue of consumable product held onstock. Update quantities as
-          they are removed.
+          Catalogue of consumable product held onstock. Update quantities as they are removed.
         </p>
       </div>
       <div class="col-md-6 col-lg-3 option">
         <span class="fa-stack fa-4x">
-          <a href="{{url_for('request_table')}}"><i class="fas fa-laptop fa-stack-1x fa-inverse" href="{{url_for('request_table')}}"></i></a>
+          <a href="{{url_for('request_table')}}"><i class="fas fa-laptop fa-stack-1x fa-inverse"></i></a>
         </span>
         <h4>Requests</h4>
         <p>
-          Request new solvents and consumables to be purchased and add to the
-          lists.
+          Request new solvents and consumables to be purchased and add to the lists.
         </p>
       </div>
       <div class="col-md-6 col-lg-3 option">
@@ -48,4 +46,5 @@
     </div>
   </div>
 </section>
+
 {% endblock %}
