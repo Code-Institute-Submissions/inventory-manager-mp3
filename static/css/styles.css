@@ -236,14 +236,6 @@ footer {
     font-size: 1.5rem;
 }
 
-/*.th {
-    font-size: 0.6rem;
-}
-
-.td {
-    font-size: 0.8rem;
-}*/
-
 td, th {
     font-size: 0.65rem;
 }
@@ -254,6 +246,34 @@ td, th {
 
 .navbar-expand {
     padding-right: 0.2rem;
+    padding-left: 2px;
+}
 }
 
+@media screen and (max-width: 480px) {
+
+.dropdown-item {
+    font-size: 0.8rem;
+}
+}
+
+
+@media screen and (max-width: 321px) {
+
+.nav-link {
+    font-size: 0.7rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.navbar-expand {
+    padding-right: 0.2rem;
+    padding-left: 2px;
+}
+
+.dropdown-item {
+    padding: .4rem 0.01rem;
+    text-align: left;
+    font-size: x-small;
+}
 }
