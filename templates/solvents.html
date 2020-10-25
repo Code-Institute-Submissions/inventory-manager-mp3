@@ -6,7 +6,26 @@
   Please update the quantity via the edit icon,<i class="fas fa-user-edit"></i>.
 </p>
 
-<p class="counter">Number of available solvents: {{sol_count}}</p>
+<form action="{{url_for('solvents')}}" method="POST">
+  <div class="search-row form-row col-12">
+    <div class="form-group col-md-6">
+      <input
+        id="searchbtn"
+        type="text"
+        class="form-control"
+        name="searchtxt"
+        placeholder="Search....."
+        value="{{searchtxt}}"
+      />
+    </div>
+    <button class="btn btn-primary btn-sm btn-gen btn-cadd btn-search" type="submit">Search</button>
+    {% if searchtxt %}
+    <button class="btn btn-primary btn-sm btn-gen btn-cadd btn-search" type="submit" onclick="document.getElementById('searchbtn').value = ''">Show All</button>
+    {% endif %}
+  </div>
+</form>
+
+<p class="counter">{{counttxt}}: {{sol_count}}</p>
 
 {% for solvent in solvents %}
 

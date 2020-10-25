@@ -1,10 +1,30 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 
 <h1>Consumables Inventory</h1>
 <p>
   Please update the quantity via the edit icon,<i class="fas fa-user-edit"></i>.
 </p>
+
+<form action="{{url_for('consumables')}}" method="POST">
+  <div class="search-row form-row col-12">
+    <div class="form-group col-md-6">
+      <input
+        id="searchbtn"
+        type="text"
+        class="form-control"
+        name="searchtxt"
+        placeholder="Search....."
+        value="{{searchtxt}}"
+      />
+    </div>
+    <button class="btn btn-primary btn-sm btn-gen btn-cadd btn-search" type="submit">Search</button>
+    {% if searchtxt %}
+    <button
+      class="btn btn-primary btn-sm btn-gen btn-cadd btn-search" type="submit" onclick="document.getElementById('searchbtn').value = ''">Show All</button>
+    {% endif %}
+  </div>
+</form>
 
 <p class="counter">Number of available consumables: {{con_count}}</p>
 
@@ -58,5 +78,5 @@
 ></a>
 <hr />
 
-{% endfor %} 
+{% endfor %}
 {% endblock %}

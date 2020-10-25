@@ -30,18 +30,32 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/solvents')
+@app.route('/solvents', methods=['GET', 'POST'])
 def solvents():
-    mysol = mongo.db.solvents.find()
+    searchtxt = request.form.get('searchtxt')
+    if not searchtxt:
+        searchtxt = ""
+        mysol = mongo.db.solvents.find()
+        counttxt = "Total number of solvents available"
+    else:
+        mysol = mongo.db.solvents.find({'$text': {'$search': searchtxt}})
+        counttxt = "Solvent record(s) found"
     sol_count = mysol.count()
-    return render_template("solvents.html", solvents=mongo.db.solvents.find(), sol_count=sol_count)
+    return render_template("solvents.html", counttxt=counttxt, solvents=mysol, sol_count=sol_count, searchtxt=searchtxt)
 
 
-@app.route('/consumables')
+@app.route('/consumables', methods=['GET', 'POST'])
 def consumables():
-    mycon = mongo.db.consumables.find()
+    searchtxt = request.form.get('searchtxt')
+    if not searchtxt:
+        searchtxt = ""
+        mycon = mongo.db.consumables.find()
+        counttxt = "Total number of consumables available"
+    else:
+        mycon = mongo.db.consumables.find({'$text': {'$search': searchtxt}})
+        counttxt = "Consumable record(s) found"
     con_count = mycon.count()
-    return render_template("consumables.html", consumables=mongo.db.consumables.find(), con_count=con_count)
+    return render_template("consumables.html", counttxt=counttxt, consumables=mycon, con_count=con_count, searchtxt=searchtxt)
 
 
 @app.route('/addsolvents')
@@ -49,11 +63,9 @@ def addsolvents():
     return render_template("addsolvents.html")
 
 
-# insert_one taken from code institute module
 @app.route('/addsolvents', methods=['POST'])
 def addsolvents_add():
-    solvents = mongo.db.solvents
-    solvents.insert_one(request.form.to_dict())
+    mongo.db.solvents.insert_one(request.form.to_dict())
     return redirect(url_for('solvents'))
 
 
@@ -98,11 +110,9 @@ def addconsumables():
     return render_template("addconsumables.html")
 
 
-# insert_one taken from code institute module
 @app.route('/addconsumables', methods=['POST'])
 def addconsumables_add():
-    consumables = mongo.db.consumables
-    consumables.insert_one(request.form.to_dict())
+    mongo.db.consumables.insert_one(request.form.to_dict())
     return redirect(url_for('consumables'))
 
 
@@ -150,7 +160,6 @@ def requests():
     return render_template("requests.html", requests=mongo.db.requests.find())
 
 
-# insert_one taken from code institute module
 @app.route('/addrequest', methods=['POST'])
 def addrequest():
     requests = mongo.db.requests
@@ -162,12 +171,6 @@ def addrequest():
 def requests_delete(req_id):
     mongo.db.requests.remove({'_id': ObjectId(req_id)})
     return redirect(url_for('requests'))
-
-
-@app.route('/info')
-def info():
-    return render_template("info.html")
-
 
 
 if __name__ == '__main__':
