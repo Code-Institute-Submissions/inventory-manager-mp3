@@ -169,6 +169,8 @@ Opened Heroku in the browser.
 
 The gitignore file contains a env.py file which holds the log in path for Mongodb.
 
+Final 'push' is the change of debug=TRUE to debug=FALSE.
+
 Below are links to my GitHub and Heroku published sites.
 
 #### Published site: https://inventory-manager-mp3.herokuapp.com/
