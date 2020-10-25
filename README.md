@@ -155,41 +155,19 @@ The project was developed in Gitpod and pushed to GitHub and Heroku.
 To deploy my Inventory Manager project in Heroku the process was as follows:-
 
 Opened Heroku in the browser.
-Logged in with my username and password.
-Selected 'new' and 'create new app'.
-Created the name for the app, inventory-manager-mp3. Name has to be unique.
-Chose the region, Europe.
-Opened terminal window in gitpod and logged into heroku using 'heroku login -i'
-Entered my email address and password used to log into heroku app.
-In terminal window typed 'git remote heroku' and the URL provide by Heroku for my app.
-Create a 'requirements.txt' file and 'Procfile'.
-Start up a web process by typing heroku ps:scale web=1 in the terminal.
-In heroku opened up 'settings' and entered in config variables. The IP and PORT.
-In addition in variables connected the MONGO_URI.
+* Logged in with my username and password.
+* Selected 'new' and 'create new app'.
+* Created the name for the app, inventory-manager-mp3. Name has to be unique.
+* Chose the region, Europe.
+* Opened terminal window in gitpod and logged into heroku using 'heroku login -i'
+* Entered my email address and password used to log into heroku app.
+* In terminal window typed 'git remote heroku' and the URL provide by Heroku for my app.
+* Create a 'requirements.txt' file and 'Procfile'.
+* Start up a web process by typing heroku ps:scale web=1 in the terminal.
+* In heroku opened up 'settings' and entered in config variables. The IP and PORT.
+* In addition in variables connected the MONGO_URI.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Opened GitHub in web browser.
-Log in with username and password.
-Select my repositories.
-Selected my project repository, Memory Madness.
-Go to 'settings' at top of page.
-Scroll down to GitHub Pages.
-Chose master branch in 'Source' dropdown menu.
-
-
-Below are links to my GitHub and published sites.
+Below are links to my GitHub and Heroku published sites.
 
 #### Published site: https://inventory-manager-mp3.herokuapp.com/
 #### GitHub site: https://github.com/hob71/inventory-manager-mp3
