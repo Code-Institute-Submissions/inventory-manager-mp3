@@ -167,6 +167,8 @@ Opened Heroku in the browser.
 * In heroku opened up 'settings' and entered in config variables. The IP and PORT.
 * In addition in variables connected the MONGO_URI.
 
+The gitignore file contains a env.py file which holds the log in path for Mongodb.
+
 Below are links to my GitHub and Heroku published sites.
 
 #### Published site: https://inventory-manager-mp3.herokuapp.com/
