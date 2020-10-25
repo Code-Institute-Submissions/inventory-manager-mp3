@@ -164,15 +164,19 @@ The code in the deployed version is the same as my gitpod repository.
 * Font Awesome for icons.
 * Thanks go to the author of the background image. Background photo created by pressfoto - www.freepik.com
 * Information on how to index the collections taken from MongoDB manuals. The code which was used is `db.solvents.createIndex({ "$**": "text" },{ name: "TextIndex" })` and `db.consumables.createIndex({ "$**": "text" },{ name: "TextIndex" })`.
-* Information for creating search was found on [stackoverflow.com](https://stackoverflow.com/). The code was '{ $text : { $search: <your string> } }' and original answer was provided by Dave Adelson.
+* Information for creating search was found on [stackoverflow.com](https://stackoverflow.com/). The code was `{ $text : { $search: <your string> } }` and original answer was provided by Dave Adelson.
+* Pop up box taken from [bootstrap.com](https://getbootstrap.com/)
 
 ## Acknowledge:
 I would like to say thank you to my mentor, Mark Railton, and the tutors and student care at the Code Institute for the help and support they gave me.
 
 
 ## Final Notes and Future Additions:
-* Looking back at the project, even though the mongo database has worked I believe a structured (sql) database would be more suitable for a large scale system.
+* Looking back at the project, even though the mongo database has worked I believe a structured (sql) database would be more suitable for a large scale system as the tables and fields would not change.
 * Future additions:
     * Additoin administrator account which would restrict access to the add, delete functions.
     * Changing the request process to also email when new requests are placed.
     * Reorder button which would automatically send a request.
+    * An alert appears when quantity_available is lower than min_quantity.
+    * Add a check via an 'if' statement to see if a catalogue number already exists (run out of time to change code).
+    * Add link from support email address.
