@@ -176,4 +176,4 @@ def requests_delete(req_id):
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=FALSE)
+            debug=False)
