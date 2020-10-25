@@ -77,16 +77,28 @@ The wireframe document can be found at [wireframes](https://github.com/hob71/inv
 
 ## Testing:
 Testing was carried out on the functions required for the user. These included  adding records, editting records, deleting record and finding number of records in collection.
-* Screen shot of database with one record.
+* Screen shot of database records.
 ![Screen shot before adding record](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/before_add.PNG)
-* Added additional recorded, now two records display and number of item has increased to two.
+
+* Added additional recorded, new record displayed and number of item has increased.
 ![Screen shot after record added and counter increases](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_add.PNG)
-* Pressed delete icon and deleted original entry and now one record and number of items changed to one.
+
+* Pressed delete icon, confirmation page displays and then deleted entry., Now one less record and number of items changed.
+![Screen shot of delete confirmation](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/delete_screen.PNG)
 ![Screen shot after deletion of record and counter decrease](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_delete.PNG)
+
 * Pressed edit icon and updated the record with a comment.
 ![Screen shot of editted record. Comment added.](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/edited_comment.PNG)
+
+* Screen shot of new page with search.
+![Screen shot before search.](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/before_search.PNG)
+
+* After search records are returned. Additional button appears to show all records again and number of records found displayed.
+![Screen shot after search.](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/after_search.PNG)
+
 * Active requests page with one entry.
 ![Screen shot of requests page before addition](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/request_before_add.PNG)
+
 * Requests page after ne request placed.
 ![Requests page after new entry](https://github.com/hob71/inventory-manager-mp3/blob/master/static/assets/img/request_after_add.PNG)
 
